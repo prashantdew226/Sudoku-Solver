@@ -1,0 +1,64 @@
+body{
+	margin: 0 auto;
+	background: url(https://images.unsplash.com/photo-1599594253093-8291ba2e897e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#pi{
+	background: #A770EF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.btn{
+	margin: 10px;
+	border-width: 2px;
+	font-weight: 600;
+}
+
+.table td{
+	padding: 0;
+	width: 71px;
+    height: 71px;
+}
+.table{
+	padding: 0;
+	margin: 0;
+	width: auto;
+	height: auto;
+}
+input{
+	padding: 0;
+	margin: 0;
+	height: 70px;
+	width: 70px;
+	border: none;
+	font-size: 40px;
+}
+.br{
+    border-right: 2px solid black;
+}
+
+.bl{
+    border-left: 2px solid black;
+}
+
+.bt{
+    border-top: 2px solid black;
+}
+
+.bb{
+    border-bottom: 2px solid black;
+}
+
+.br{
+    border-right: 2px solid black;
+}
+.table-bordered td, .table-bordered th {
+    border: 1px solid #000000;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

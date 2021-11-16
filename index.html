@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="stylesheet" type="text/css" href="SudokuGame.css">
+	<title>Sudoku Game</title>
+
+</head>
+<body>
+	<div id="pi">
+	<h1 class="display-4 text-center"><i class="fab fa-buromobelexperte"></i> Sudoku Game</h1>
+	<div class="container d-flex justify-content-center">	
+		<button type="button" id="newGame" class="btn btn-primary rounded-pill">New Game</button>
+		<button type="button" id="playAgain" class="btn btn-secondary">Play Again</button>
+		<button type="button" id="check" class="btn btn-warning rounded-pill">Check</button>
+		<button type="button" id="submit" class="btn btn-success ">Submit</button>
+		<button type="button" id="hint" class="btn btn-danger rounded-pill">Hint(<span id="no">0</span>/3)</button>
+		<button type="button" id="solve" class="btn btn-warning">Get Solution</button>
+		<button type="button" id="solver" class="btn btn-info rounded-pill">Sudoku Solver</button>
+	</div>
+	</div>
+	<br>
+	<div class="container d-flex justify-content-center">
+		<table class="table table-bordered">
+			 <tr>
+                <td><input type="number" name="" id="00" class="text-center bt bl"></td>
+                <td><input type="number" name="" id="01" class="text-center bt"></td>
+                <td><input type="number" name="" id="02" class="text-center bt"></td>
+                <td><input type="number" name="" id="03" class="text-center bt bl"></td>
+                <td><input type="number" name="" id="04" class="text-center bt"></td>
+                <td><input type="number" name="" id="05" class="text-center bt"></td>
+                <td><input type="number" name="" id="06" class="text-center bt bl"></td>
+                <td><input type="number" name="" id="07" class="text-center bt"></td>
+                <td><input type="number" name="" id="08" class="text-center bt br"></td>
+            </tr>
+            <tr>
+                <td><input type="number" name="" id="10" class="text-center bl"></td>
+                <td><input type="number" name="" id="11" class="text-center"></td>
+                <td><input type="number" name="" id="12" class="text-center"></td>
+                <td><input type="number" name="" id="13" class="text-center bl"></td>
+                <td><input type="number" name="" id="14" class="text-center"></td>
+                <td><input type="number" name="" id="15" class="text-center"></td>
+                <td><input type="number" name="" id="16" class="text-center bl"></td>
+                <td><input type="number" name="" id="17" class="text-center"></td>
+                <td><input type="number" name="" id="18" class="text-center br"></td>
+            </tr>
+            <tr>
+                <td><input type="number" name="" id="20" class="text-center bl"></td>
+                <td><input type="number" name="" id="21" class="text-center"></td>
+                <td><input type="number" name="" id="22" class="text-center"></td>
+                <td><input type="number" name="" id="23" class="text-center bl"></td>
+                <td><input type="number" name="" id="24" class="text-center"></td>
+                <td><input type="number" name="" id="25" class="text-center"></td>
+                <td><input type="number" name="" id="26" class="text-center bl"></td>
+                <td><input type="number" name="" id="27" class="text-center"></td>
+                <td><input type="number" name="" id="28" class="text-center br"></td>
+            </tr>
+            <tr>
+                <td><input type="number" name="" id="30" class="text-center bt bl"></td>
+                <td><input type="number" name="" id="31" class="text-center bt"></td>
+                <td><input type="number" name="" id="32" class="text-center bt"></td>
+                <td><input type="number" name="" id="33" class="text-center bt bl"></td>
+                <td><input type="number" name="" id="34" class="text-center bt"></td>
+                <td><input type="number" name="" id="35" class="text-center bt"></td>
+                <td><input type="number" name="" id="36" class="text-center bt bl"></td>
+                <td><input type="number" name="" id="37" class="text-center bt"></td>
+                <td><input type="number" name="" id="38" class="text-center bt br"></td>
+            </tr>
+            <tr>
+                <td><input type="number" name="" id="40" class="text-center bl"></td>
+                <td><input type="number" name="" id="41" class="text-center"></td>
+                <td><input type="number" name="" id="42" class="text-center"></td>
+                <td><input type="number" name="" id="43" class="text-center bl"></td>
+                <td><input type="number" name="" id="44" class="text-center"></td>
+                <td><input type="number" name="" id="45" class="text-center"></td>
+                <td><input type="number" name="" id="46" class="text-center bl"></td>
+                <td><input type="number" name="" id="47" class="text-center"></td>
+                <td><input type="number" name="" id="48" class="text-center br"></td>
+            </tr>
+            <tr>
+                <td><input type="number" name="" id="50" class="text-center bl"></td>
+                <td><input type="number" name="" id="51" class="text-center"></td>
+                <td><input type="number" name="" id="52" class="text-center"></td>
+                <td><input type="number" name="" id="53" class="text-center bl"></td>
+                <td><input type="number" name="" id="54" class="text-center"></td>
+                <td><input type="number" name="" id="55" class="text-center"></td>
+                <td><input type="number" name="" id="56" class="text-center bl"></td>
+                <td><input type="number" name="" id="57" class="text-center"></td>
+                <td><input type="number" name="" id="58" class="text-center br"></td>
+            </tr>
+            <tr>
+                <td><input type="number" name="" id="60" class="text-center bt bl"></td>
+                <td><input type="number" name="" id="61" class="text-center bt"></td>
+                <td><input type="number" name="" id="62" class="text-center bt"></td>
+                <td><input type="number" name="" id="63" class="text-center bt bl"></td>
+                <td><input type="number" name="" id="64" class="text-center bt"></td>
+                <td><input type="number" name="" id="65" class="text-center bt"></td>
+                <td><input type="number" name="" id="66" class="text-center bt bl"></td>
+                <td><input type="number" name="" id="67" class="text-center bt"></td>
+                <td><input type="number" name="" id="68" class="text-center bt br"></td>
+            </tr>
+            <tr>
+                <td><input type="number" name="" id="70" class="text-center bl"></td>
+                <td><input type="number" name="" id="71" class="text-center"></td>
+                <td><input type="number" name="" id="72" class="text-center"></td>
+                <td><input type="number" name="" id="73" class="text-center bl"></td>
+                <td><input type="number" name="" id="74" class="text-center"></td>
+                <td><input type="number" name="" id="75" class="text-center"></td>
+                <td><input type="number" name="" id="76" class="text-center bl"></td>
+                <td><input type="number" name="" id="77" class="text-center"></td>
+                <td><input type="number" name="" id="78" class="text-center br"></td>
+            </tr>
+            <tr>
+                <td><input type="number" name="" id="80" class="text-center bb bl"></td>
+                <td><input type="number" name="" id="81" class="text-center bb"></td>
+                <td><input type="number" name="" id="82" class="text-center bb"></td>
+                <td><input type="number" name="" id="83" class="text-center bb bl"></td>
+                <td><input type="number" name="" id="84" class="text-center bb"></td>
+                <td><input type="number" name="" id="85" class="text-center bb"></td>
+                <td><input type="number" name="" id="86" class="text-center bb bl"></td>
+                <td><input type="number" name="" id="87" class="text-center bb"></td>
+                <td><input type="number" name="" id="88" class="text-center bb br"></td>
+            </tr>
+		</table>
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="SudokuGame.js"></script>
+</body>
+</html>
